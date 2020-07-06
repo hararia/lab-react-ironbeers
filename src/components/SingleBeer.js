@@ -30,12 +30,12 @@ class SingleBeer extends Component {
     	<Link to="/">Home</Link>
     </header>
 
-    <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-    	<img style={{width:'8vw', height:'13vh'}} src={this.state.beer.image_url} />
-    	<span>{this.state.beer.name} {this.state.beer.attenuation_level}</span>
-    	<span>{this.state.beer.tagline} {this.state.beer.first_brewed}</span>
-    	<span>{this.state.beer.description}</span>
-    	<span>{this.state.beer.contributed_by}</span>
+    <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', position:'relative', top:'50px'}}>
+    	<img style={{width:'15vw', height:'30vh', margin:'auto'}} src={this.state.beer.image_url} />
+    	<div style={{margin:'10px'}}><span style={{margin:'30%'}}>{this.state.beer.name}</span> <span>{this.state.beer.attenuation_level}</span></div>
+    	<span style={{margin:'10px'}}>{this.state.beer.tagline} {this.state.beer.first_brewed}</span>
+    	<span style={{margin:'10px'}}>{this.state.beer.description}</span>
+    	<span style={{margin:'10px'}}>{this.state.beer.contributed_by}</span>
     </div>
     
     </div>

@@ -15,17 +15,17 @@ class Home extends Component {
     
     <div>
     <img className='beer-image' id="all-beers-image" src={AllBeersImage} alt="lots of beer"/>
-    <Link to="all-beers">All Beers</Link>
+    <Link className='homepage-link' to="all-beers">All Beers</Link>
     </div>
 
     <div>
     <img className='beer-image' id="random-beer-image" src={randomBeerImage} alt="smiley beer"/>
-    <Link to="random-beer">Random Beer</Link>
+    <Link className='homepage-link' to="random-beer">Random Beer</Link>
     </div>
 
     <div>
     <img className='beer-image' id="new-beer-image" src={newBeerImage} alt="beer at a brewery"/>
-    <Link to="new-beer">New Beer</Link>
+    <Link className='homepage-link' to="new-beer">New Beer</Link>
     </div>
 
     

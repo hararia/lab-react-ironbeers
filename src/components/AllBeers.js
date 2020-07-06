@@ -17,26 +17,24 @@ class AllBeers extends Component {
 		this.setState({
 			beers:res.data
 		})
-		console.log(this.state)
-		console.log(this.props)
 	}
 
 	displayBeers = () =>{
 		return this.state.beers.map(eachBeer=>{
 			return(
-			<div style={{display:'flex', alignItems:'center',justifyContent:'center', borderBottom:'1px solid grey'}}>	
+			<Link to={`/beers/${eachBeer.name}`}> <div style={{display:'flex', alignItems:'center', border:'1px solid grey'}}>	
 			 
-			<Link to={`/beers/${eachBeer.name}`}><img className='all-beers-images' src={eachBeer.image_url}/></Link>
+			<img className='all-beers-images' style={{margin:'10%'}} src={eachBeer.image_url}/>
 
-			 <div>
-			 <span style = {{fontSize:'1.2em'}}> {eachBeer.name} </span>
+			 <div style = {{paddingRight:'5%'}}>
+			 <span style = {{fontSize:'1.1em', padding:'5%', position:'relative', bottom:'20px'}}> {eachBeer.name} </span>
 			 <br/>
-			 <span style = {{color:'grey'}}> {eachBeer.tagline} </span>
+			 <span style = {{color:'grey', fontSize:'0.9em', padding:'5%', position:'relative', bottom:'5px'}}> {eachBeer.tagline} </span>
 			 <br/>
-			 <span> {eachBeer.contributed_by} </span>
+			 <span> {eachBeer.contributed_by}; </span>
 			 </div>
 
-			 </div>
+			 </div> </Link>
 			 )
 		})
 	}

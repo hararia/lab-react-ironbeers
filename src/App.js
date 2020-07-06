@@ -14,16 +14,12 @@ class App extends Component {
     <div className="App">
 
     <Switch>
+    
     <Route exact path='/' render={()=><Home/>}/>
     <Route exact path='/all-beers' render={(props)=><AllBeers/>}/>
     <Route exact path='/random-beer' render={()=><RandomBeer/>}/>
     <Route exact path='/new-beer' render={()=><NewBeer/>}/>
-    <Route
-              exact
-              path="/beers/:id"
-              render={(props) => <SingleBeer  {...props} />}
-            />
-     
+    <Route exacr path="/beers/:id" render={(props) => <SingleBeer {...props} />}/>
 
     </Switch>
     </div>

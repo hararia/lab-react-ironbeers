@@ -47,6 +47,11 @@ header{
   height:15vh;
 }
 
+.homepage-link{
+  text-decoration:none;
+  font-size: 2em;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
